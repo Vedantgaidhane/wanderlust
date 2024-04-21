@@ -35,6 +35,19 @@ _I'd love for you to make the most of this project - it's all about learning, he
 3. **Install Required Dependencies**
 
    ```bash
+   install npm 
+	# installs NVM (Node Version Manager)
+	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+
+	# download and install Node.js
+	nvm install 21
+
+	# verifies the right Node.js version is in the environment
+	node -v # should print `v21.7.3`
+
+	# verifies the right NPM version is in the environment
+	npm -v # should print `10.5.0`
+
    npm i
    ```
 
@@ -44,7 +57,8 @@ _I'd love for you to make the most of this project - it's all about learning, he
 
 5. **Import sample data**
 
-   > To populate the database with sample posts, you can copy the content from the `backend/data/sample_posts.json` file and insert it as a document in the `wanderlust/posts` collection in your local MongoDB database using either MongoDB Compass or `mongoimport`.
+
+> To populate the database with sample posts, you can copy the content from the `backend/data/sample_posts.json` file and insert it as a document in the `wanderlust/posts` collection in your local MongoDB database using either MongoDB Compass or `mongoimport`.
 
    ```bash
    mongoimport --db wanderlust --collection posts --file ./data/sample_posts.json --jsonArray
